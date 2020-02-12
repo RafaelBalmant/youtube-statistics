@@ -8,4 +8,4 @@ function Channel(props) {
   );
 }
 
-export default Index;
+export default Channel;
