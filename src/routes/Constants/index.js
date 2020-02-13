@@ -1,4 +1,4 @@
 module.exports = {
-  welcome: "/welcome",
-  channel: "/channel"
+  welcome: "/Welcome",
+  channel: "/Channel"
 };

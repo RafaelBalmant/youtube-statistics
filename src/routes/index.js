@@ -1,6 +1,6 @@
 import { welcome, channel } from './Constants';
-import Welcome from '../components/pages/welcome'
-import Channel from '../components/pages/channel'
+import Welcome from '../components/pages/Welcome'
+import Channel from '../components/pages/Channel'
 
 export const pages = [
   {
