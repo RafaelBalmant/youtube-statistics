@@ -1,5 +1,13 @@
 body{
   background-color: #6f6f6f!important;
+  height: 100%;
+}
+html{
+  height: 100%!important;
+}
+
+#root {
+  height: 100%;
 }
 
 *{
