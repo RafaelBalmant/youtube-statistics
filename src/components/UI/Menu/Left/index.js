@@ -6,20 +6,20 @@ import {
 
 function LeftMenu() {
 
-  const [menuState, setMenuState] = useState(true);
+  const [menuState, setMenuState] = useState(false);
 
   const setMenuStateCallback = useCallback(() => {
     setMenuState(!menuState)
   },[menuState]);
+
+  console.log(menuState)
 
   return (
     <>
       <Menu menuState={menuState}>
         <span
           className={`
-           ${ menuState ? "fas fa-arrow-circle-left"
-            : "fab fa-youtube" }
-            fas fa-arrow-circle-left
+           fas fa-arrow-circle-left
            fa-2x 
            text-white
            float-lg-right m-2

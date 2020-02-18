@@ -8,10 +8,28 @@ export const Menu = styled.div`
   padding: 0;
   display: flex;
   position: absolute;
-  left: ${props => props.menuState ? "" : "-133px"};
-  transition: 2s!important;
   flex-direction: column;
   justify-content: space-around;
+  animation: ${props => props.menuState ? "closeMenu 0.7s forwards" : "openMenu 0.7s forwards"};
+  
+  @keyframes closeMenu{
+    0%{
+      left: -50px;
+    }
+    100%{
+       left: -140px;
+    }
+  }
+  
+  @keyframes openMenu{
+    0%{
+      left: -140px;
+    }
+    100%{
+       left: 0;
+    }
+  }
+  
   ul{
     list-style-type: none;
     text-align: center;
@@ -49,28 +67,28 @@ export const ButtonMenu = styled.button`
  
  &:hover{
   font-size: 22px;
-  transition: 0.4s;
  }
 `;
 
 export const BodyMenu  = styled.div`
   width: 100%!important;
   height: 80%!important;
-  left: ${props => props.menuState ? "": "-200px"};
   position: absolute;
   top: 180px;
+  animation: ${props => props.menuState ? "closeMenu 0.7s forwards" : "openMenu"};
 `;
 
 export const HeaderMenu = styled.div`
   position: absolute;
   top: 60px;
-  left: ${props => props.menuState ? "": "-200px"};
   width: 100%!important;
   height: 20%!important;
   flex-direction: column;
   align-items: center;
   display: flex;
   color: white;
+  animation: ${props => props.menuState ? "closeMenu 0.7s forwards" : "openMenu"};
+  
   h4{
     font-family: 'Oswald', sans-serif;
   }
