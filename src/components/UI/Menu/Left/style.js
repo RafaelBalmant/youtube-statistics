@@ -7,6 +7,9 @@ export const Menu = styled.div`
   margin-right: 30px;
   padding: 0;
   display: flex;
+  position: absolute;
+  left: ${props => props.menuState ? "" : "-133px"};
+  transition: 2s!important;
   flex-direction: column;
   justify-content: space-around;
   ul{
@@ -23,6 +26,14 @@ export const Menu = styled.div`
   }
   li{
     margin-top: 10px;
+    width: 100%!important;
+  }
+  .toggle{
+    cursor:pointer;
+    position: absolute;
+    top: 10px;
+    right: 3px;
+    
   }
 `;
 
@@ -34,6 +45,7 @@ export const ButtonMenu = styled.button`
   width: 100%;
   padding: 5px;
   font-size: 18px;
+  text-align: left;
  
  &:hover{
   font-size: 22px;
@@ -44,15 +56,20 @@ export const ButtonMenu = styled.button`
 export const BodyMenu  = styled.div`
   width: 100%!important;
   height: 80%!important;
- 
+  left: ${props => props.menuState ? "": "-200px"};
+  position: absolute;
+  top: 180px;
 `;
 
 export const HeaderMenu = styled.div`
+  position: absolute;
+  top: 60px;
+  left: ${props => props.menuState ? "": "-200px"};
   width: 100%!important;
   height: 20%!important;
-  display: flex;
   flex-direction: column;
   align-items: center;
+  display: flex;
   color: white;
   h4{
     font-family: 'Oswald', sans-serif;

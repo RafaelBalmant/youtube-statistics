@@ -13,3 +13,9 @@ html{
 *{
   font-family: 'Lato', serif;
 }
+
+@media (max-width: 766px) {
+  #route{
+    margin-left: 30%;
+  }
+}

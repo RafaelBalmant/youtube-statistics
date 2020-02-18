@@ -1,27 +1,36 @@
 import React, { useState, useCallback } from 'react';
 import LogoMini from "../../../../images/logo_mini.png"
 import {
-  Menu, ButtonMenu, BodyMenu, HeaderMenu,
+  Menu, ButtonMenu, BodyMenu, HeaderMenu
 } from "./style";
 
 function LeftMenu() {
 
-  const [userMenuState, setUserMenuState] = useState(false);
+  const [menuState, setMenuState] = useState(true);
 
-  const setUserMenuStateCallback = useCallback(() => {
-    setUserMenuState(!userMenuState)
-  },[userMenuState]);
-
-  console.log(userMenuState)
+  const setMenuStateCallback = useCallback(() => {
+    setMenuState(!menuState)
+  },[menuState]);
 
   return (
     <>
-      <Menu>
-        <HeaderMenu>
+      <Menu menuState={menuState}>
+        <span
+          className={`
+           ${ menuState ? "fas fa-arrow-circle-left"
+            : "fab fa-youtube" }
+            fas fa-arrow-circle-left
+           fa-2x 
+           text-white
+           float-lg-right m-2
+           toggle`}
+          onClick={setMenuStateCallback}
+        />
+        <HeaderMenu menuState={menuState}>
           <img src={LogoMini} width="80px" height="75px"/>
           <h4>YouTube Statistic</h4>
         </HeaderMenu>
-        <BodyMenu>
+        <BodyMenu menuState={menuState}>
           <ul>
             <li>
               <ButtonMenu>

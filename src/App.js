@@ -10,9 +10,11 @@ function App() {
   return (
     <div className="d-flex h-100">
       <LeftMenu/>
-      <Router>
-        <Routes/>
-      </Router>
+      <div id="route">
+        <Router>
+          <Routes/>
+        </Router>
+      </div>
     </div>
   );
 }
